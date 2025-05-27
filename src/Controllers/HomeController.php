@@ -12,11 +12,20 @@ class HomeController {
     }
 
     public function index() {
+        $data = $this->manager->all();
         require VIEWS . 'App/homepage.php';
     }
 
-    public function viewLink() {
-        // $data = $this->manager->all();
-        require VIEWS . 'App/link.php';
+    public function addPost() {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            try {
+                $this->manager->add();
+                header('Location: /');
+                exit;
+            } catch (\Exception $e) {
+                $error = $e->getMessage();
+            }
+        }
+        require VIEWS . 'App/addPost.php';
     }
 }

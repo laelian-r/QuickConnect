@@ -20,7 +20,7 @@ $a=1;
                 </li>
 
                 <li>
-                    <a href="/lien">Lien</a>
+                    <a href="/publier">Publier</a>
                 </li>
             </ul>
         </nav>
@@ -31,7 +31,7 @@ $a=1;
     </main>
 
     <footer>
-        <p>Gestion App</p>
+        <p>&copy; Copyright QuickConnect all right reserved</p>
     </footer>
 </body>
 </html>
