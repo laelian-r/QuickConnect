@@ -17,15 +17,7 @@ class HomeController {
     }
 
     public function addPost() {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            try {
-                $this->manager->add();
-                header('Location: /');
-                exit;
-            } catch (\Exception $e) {
-                $error = $e->getMessage();
-            }
-        }
+        $data = $this->manager->add();
         require VIEWS . 'App/addPost.php';
     }
 }

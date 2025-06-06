@@ -8,7 +8,7 @@ require SRC . 'helper.php';
 
 $router = new App\Router($_SERVER["REQUEST_URI"]);
 $router->get('/', "HomeController@index");
-$router->post('/publier', "HomeController@addPost");
+$router->get('/publier', "HomeController@addPost");
 $router->get('/lien/', "HomeController@viewLink");
 
 $router->run();
